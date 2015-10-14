@@ -11,43 +11,26 @@ three = ['Adequate', 'Amazement', 'Attention', 'Attractive', 'Average', 'Banana'
 two = ['Acquired', 'Again' , 'Aircrafts', 'Alleged', 'Ancient', 'Auto', 'Avoid', 'Bacon', 'Basket', 'Behaved', 'Between', 'Bible', 'Billion', 'Birthright', 'Brilliant', 'Buildings', 'Collapsed', 'Conscience', 'Cycle' , 'Danger', 'Daring', 'Discuss', 'Drearier', 'Enter', 'Evening', 'Every', 'Evil', 'Forceps', 'Hamper', 'Hockey', 'Hundred', 'Inspired', 'Involved', 'Kitten', 'London', 'Lumber', 'Mountain', 'Photo', 'Playful', 'Police', 'Sheepish']
 one = ['A', 'All', 'And', 'Are', 'As', 'Be', 'By', 'Day', 'Did', 'Each', 'Few', 'For', 'Get', 'Have', 'He', 'Him', 'His', 'I', 'In', 'Is', 'It', 'Long', 'Man', 'Me', 'More', 'Much', 'My', 'New', 'Not', 'Now', 'Of', 'Off', 'Old', 'On', 'One', 'Or', 'Out', 'Same', 'She', 'So', 'State', 'Than', 'That', 'The', 'They', 'Time', 'To', 'Up', 'War', 'Was']
 grammar = """haiku -> five seven five 
-      seven -> '""" + random.choice(seven) + """'
-      seven -> '""" + random.choice(seven) + """'
-      seven -> '""" + random.choice(seven) + """'
-      seven -> '""" + random.choice(seven) + """'
+      seven -> 'Arteriosclerosis' | 'Artificiality' | 'Autobiographical' | 'Conceptualization' | 'Decriminalization' | 'Disproportionality' | 'Editorializing' | 'Heterogeneity' | 'Infinitesimally' | 'Intercolonization' | 'Irrefutability' | 'Irreversibility' | 'Manoeuvrability' | 'Megalomaniacal' | 'Oversimplification' | 'Proletarianism' | 'Sentimentalization' | 'Superficiality'
+      seven -> one six
       seven -> two five 
       seven -> three four 
       seven -> four three
       seven -> five two
-      six -> '""" + random.choice(six) + """'
-      six -> '""" + random.choice(six) + """'
-      six -> '""" + random.choice(six) + """'
-      six -> '""" + random.choice(six) + """'
+      seven -> six one
+      six -> 'Antediluvian' | 'Circumnavigation' | 'Disambiguation' | 'Disappriciated' | 'Discontinuity' | 'Dissimilation' | 'Eleemosynary' | 'Incomprehensible' | 'Indefatigable' | 'Prestidigitation' | 'Responsibility' | 'Sesquicentennial' | 'Superannuated' | 'Supernumerary' | 'Teleportality' | 'Verisimilitude'
+      six -> one five
       six -> two four
       six -> three three
       six -> four two
-      five -> '""" + random.choice(five) + """'
-      five -> '""" + random.choice(five) + """'
-      five -> '""" + random.choice(five) + """'
-      five -> '""" + random.choice(five) + """'
+      six -> five one
+      five -> 'Assimilation' | 'Conscientiousness' | 'Creativity' | 'Diagnostician' | 'Electricity' | 'Humiliation' | 'Mathematical' | 'Opportunity' | 'Popularity' | 'Similarity' | 'Incredulity' | 'Paediatrician' | 'Perpendicular' | 'Unbelievable' | 'University' | 'Vocabulary'
       five -> two three
       five -> three two
-      four -> '""" + random.choice(four) + """'
-      four -> '""" + random.choice(four) + """'
-      four -> '""" + random.choice(four) + """'
-      four -> '""" + random.choice(four) + """'
-      four -> '""" + random.choice(four) + """'
+      four -> 'Bureaucratic' | 'Contradicting' | 'Copulation'| 'Degenerate'| 'Dictionary' | 'Directory' | 'Disestablish'| 'Execution' | 'Indecisive'| 'Insoluble' | 'Mandatory'| 'Obligation' | 'Obviously' | 'Overwhelming' | 'Persecution' | 'Population' | 'Similitude' | 'Supposedly' | 'Television' | 'Termination' | 'Undoubtedly'
       four -> two two
-      three -> '""" + random.choice(three) + """'
-      three -> '""" + random.choice(three) + """'
-      three -> '""" + random.choice(three) + """'
-      three -> '""" + random.choice(three) + """'
-      three -> '""" + random.choice(three) + """'
-      two -> '""" + random.choice(two) + """'
-      two -> '""" + random.choice(two) + """'
-      two -> '""" + random.choice(two) + """'
-      two -> '""" + random.choice(two) + """'
-      two -> '""" + random.choice(two) + """'
+      three -> 'Adequate'| 'Amazement'| 'Attention'| 'Attractive'| 'Average'| 'Banana'| 'Bicycle' | 'Blindingly'| 'Buffalo' | 'Cabinet'| 'Certainly'| 'Companion'| 'Complement'| 'Conference'| 'Conference' | 'Connection'| 'Considered'| 'Curious' | 'Customary' | 'Dangerous' | 'Difficult'| 'Dilemma'| 'Dinosaur' | 'Documents'| 'Easily'| 'Electric' | 'Everything'| 'Exciting' | 'Exercise' | 'Exhaustion' | 'Family' | 'Favourite' | 'Glacier'| 'Happenings'| 'Horizon' | 'Illustrate'| 'Industry' | 'Instrument'| 'Legacy'| 'Liberal'| 'Library' | 'Numerous' | 'Palatial'| 'Period' | 'Persistent' | 'Photograph'| 'Reunion' | 'Substitute' | 'Terrible' | 'Typical' 
+      two -> 'Acquired'| 'Again' | 'Aircrafts'| 'Alleged'| 'Ancient'| 'Auto'| 'Avoid'| 'Bacon'| 'Basket'| 'Behaved'| 'Between'| 'Bible'| 'Billion'| 'Birthright'| 'Brilliant'| 'Buildings'| 'Collapsed'| 'Conscience'| 'Cycle' | 'Danger'| 'Daring'| 'Discuss'| 'Drearier'| 'Enter'| 'Evening'| 'Every'| 'Evil'| 'Forceps'| 'Hamper'| 'Hockey'| 'Hundred'| 'Inspired'| 'Involved'| 'Kitten'| 'London'| 'Lumber'| 'Mountain'| 'Photo'| 'Playful'| 'Police'| 'Sheepish'
       one -> '""" + random.choice(one) + """'
       one -> '""" + random.choice(one) + """'
       one -> '""" + random.choice(one) + """'
