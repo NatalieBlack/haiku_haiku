@@ -10,6 +10,7 @@ four = ['Bureaucratic' , 'Contradicting' , 'Copulation', 'Degenerate', 'Dictiona
 three = ['Adequate', 'Amazement', 'Attention', 'Attractive', 'Average', 'Banana', 'Bicycle' , 'Blindingly', 'Buffalo' , 'Cabinet', 'Certainly', 'Companion', 'Complement', 'Conference', 'Conference' , 'Connection', 'Considered', 'Curious' , 'Customary' , 'Dangerous' , 'Difficult', 'Dilemma', 'Dinosaur' , 'Documents', 'Easily', 'Electric' , 'Everything', 'Exciting' , 'Exercise' , 'Exhaustion' , 'Family' , 'Favourite' , 'Glacier', 'Happenings', 'Horizon' , 'Illustrate', 'Industry' , 'Instrument', 'Legacy', 'Liberal', 'Library' , 'Numerous' , 'Palatial', 'Period' , 'Persistent' , 'Photograph', 'Reunion' , 'Substitute' , 'Terrible' , 'Typical' ]
 two = ['Acquired', 'Again' , 'Aircrafts', 'Alleged', 'Ancient', 'Auto', 'Avoid', 'Bacon', 'Basket', 'Behaved', 'Between', 'Bible', 'Billion', 'Birthright', 'Brilliant', 'Buildings', 'Collapsed', 'Conscience', 'Cycle' , 'Danger', 'Daring', 'Discuss', 'Drearier', 'Enter', 'Evening', 'Every', 'Evil', 'Forceps', 'Hamper', 'Hockey', 'Hundred', 'Inspired', 'Involved', 'Kitten', 'London', 'Lumber', 'Mountain', 'Photo', 'Playful', 'Police', 'Sheepish']
 one = ['A', 'All', 'And', 'Are', 'As', 'Be', 'By', 'Day', 'Did', 'Each', 'Few', 'For', 'Get', 'Have', 'He', 'Him', 'His', 'I', 'In', 'Is', 'It', 'Long', 'Man', 'Me', 'More', 'Much', 'My', 'New', 'Not', 'Now', 'Of', 'Off', 'Old', 'On', 'One', 'Or', 'Out', 'Same', 'She', 'So', 'State', 'Than', 'That', 'The', 'They', 'Time', 'To', 'Up', 'War', 'Was']
+other_one = ['not', 'blue','good','day','night','hour','old','long','small','time','moon','sun','earth','fire','air','quite','go','years','same','facts','love']
 grammar = """haiku -> five seven five 
       seven -> 'Arteriosclerosis' | 'Artificiality' | 'Autobiographical' | 'Conceptualization' | 'Decriminalization' | 'Disproportionality' | 'Editorializing' | 'Heterogeneity' | 'Infinitesimally' | 'Intercolonization' | 'Irrefutability' | 'Irreversibility' | 'Manoeuvrability' | 'Megalomaniacal' | 'Oversimplification' | 'Proletarianism' | 'Sentimentalization' | 'Superficiality'
       seven -> one six
@@ -29,12 +30,14 @@ grammar = """haiku -> five seven five
       five -> three two
       four -> 'Bureaucratic' | 'Contradicting' | 'Copulation'| 'Degenerate'| 'Dictionary' | 'Directory' | 'Disestablish'| 'Execution' | 'Indecisive'| 'Insoluble' | 'Mandatory'| 'Obligation' | 'Obviously' | 'Overwhelming' | 'Persecution' | 'Population' | 'Similitude' | 'Supposedly' | 'Television' | 'Termination' | 'Undoubtedly'
       four -> two two
+      four -> one three 
+      four -> three one
       three -> 'Adequate'| 'Amazement'| 'Attention'| 'Attractive'| 'Average'| 'Banana'| 'Bicycle' | 'Blindingly'| 'Buffalo' | 'Cabinet'| 'Certainly'| 'Companion'| 'Complement'| 'Conference'| 'Conference' | 'Connection'| 'Considered'| 'Curious' | 'Customary' | 'Dangerous' | 'Difficult'| 'Dilemma'| 'Dinosaur' | 'Documents'| 'Easily'| 'Electric' | 'Everything'| 'Exciting' | 'Exercise' | 'Exhaustion' | 'Family' | 'Favourite' | 'Glacier'| 'Happenings'| 'Horizon' | 'Illustrate'| 'Industry' | 'Instrument'| 'Legacy'| 'Liberal'| 'Library' | 'Numerous' | 'Palatial'| 'Period' | 'Persistent' | 'Photograph'| 'Reunion' | 'Substitute' | 'Terrible' | 'Typical' 
-      two -> 'Acquired'| 'Again' | 'Aircrafts'| 'Alleged'| 'Ancient'| 'Auto'| 'Avoid'| 'Bacon'| 'Basket'| 'Behaved'| 'Between'| 'Bible'| 'Billion'| 'Birthright'| 'Brilliant'| 'Buildings'| 'Collapsed'| 'Conscience'| 'Cycle' | 'Danger'| 'Daring'| 'Discuss'| 'Drearier'| 'Enter'| 'Evening'| 'Every'| 'Evil'| 'Forceps'| 'Hamper'| 'Hockey'| 'Hundred'| 'Inspired'| 'Involved'| 'Kitten'| 'London'| 'Lumber'| 'Mountain'| 'Photo'| 'Playful'| 'Police'| 'Sheepish'
-      one -> '""" + random.choice(one) + """'
-      one -> '""" + random.choice(one) + """'
-      one -> '""" + random.choice(one) + """'
-      one -> '""" + random.choice(one) + "'"
+      two -> 'Acquired'| 'Again' | 'Aircrafts'| 'Alleged'| 'Ancient'| 'Auto'| 'Avoid'| 'Basket'| 'Behaved'| 'Between'| 'Bible'| 'Billion'| 'Birthright'| 'Brilliant'| 'Buildings'| 'Collapsed'| 'Conscience'| 'Cycle' | 'Danger'| 'Daring'| 'Discuss'| 'Drearier'| 'Enter'| 'Evening'| 'Every'| 'Evil'| 'Forceps'| 'Hamper'| 'Hockey'| 'Hundred'| 'Inspired'| 'Involved'| 'Kitten'| 'London'| 'Lumber'| 'Mountain'| 'Photo'| 'Playful'| 'Police'| 'Sheepish'
+      one -> '""" + random.choice(other_one) + """'
+      one -> '""" + random.choice(other_one) + """'
+      one -> '""" + random.choice(other_one) + """'
+      one -> '""" + random.choice(other_one) + "'"
 
 g = CFG.fromstring(grammar)
 #for poem in generate(g, n=100):

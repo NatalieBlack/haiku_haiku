@@ -11,6 +11,11 @@ grammar.production(:five) do
   clause('two two one')
   clause('two one two')
   clause('one two two')
+  clause('')
+end
+
+grammar.production(:four) do
+  clause('two two')
 end
 
 grammar.production(:seven) do

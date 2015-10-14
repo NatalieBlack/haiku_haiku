@@ -8,10 +8,11 @@ grammar.production(:five) do
   clause('four one')
   clause('two three')
   clause('three two')
-  clause('two two one')
-  clause('two one two')
-  clause('one two two')
-  clause('')
+  clause(five.sample)
+  clause(five.sample)
+  clause(five.sample)
+  clause(five.sample)
+  clause(five.sample)
 end
 
 grammar.production(:four) do
