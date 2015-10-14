@@ -15,50 +15,39 @@ grammar = """haiku -> five seven five
       seven -> '""" + random.choice(seven) + """'
       seven -> '""" + random.choice(seven) + """'
       seven -> '""" + random.choice(seven) + """'
-      seven -> one six
       seven -> two five 
       seven -> three four 
       seven -> four three
       seven -> five two
-      seven -> six one
       six -> '""" + random.choice(six) + """'
       six -> '""" + random.choice(six) + """'
       six -> '""" + random.choice(six) + """'
       six -> '""" + random.choice(six) + """'
-      six -> one five
       six -> two four
       six -> three three
       six -> four two
-      six -> five one
       five -> '""" + random.choice(five) + """'
       five -> '""" + random.choice(five) + """'
       five -> '""" + random.choice(five) + """'
       five -> '""" + random.choice(five) + """'
-      five -> one four
       five -> two three
       five -> three two
-      five -> four one
       four -> '""" + random.choice(four) + """'
       four -> '""" + random.choice(four) + """'
       four -> '""" + random.choice(four) + """'
       four -> '""" + random.choice(four) + """'
       four -> '""" + random.choice(four) + """'
-      four -> one three
       four -> two two
-      four -> three one
       three -> '""" + random.choice(three) + """'
       three -> '""" + random.choice(three) + """'
       three -> '""" + random.choice(three) + """'
       three -> '""" + random.choice(three) + """'
       three -> '""" + random.choice(three) + """'
-      three -> one two
-      three -> two one
       two -> '""" + random.choice(two) + """'
       two -> '""" + random.choice(two) + """'
       two -> '""" + random.choice(two) + """'
       two -> '""" + random.choice(two) + """'
       two -> '""" + random.choice(two) + """'
-      two -> one one
       one -> '""" + random.choice(one) + """'
       one -> '""" + random.choice(one) + """'
       one -> '""" + random.choice(one) + """'
@@ -70,10 +59,10 @@ g = CFG.fromstring(grammar)
 
 fives = []
 sevens = []
-for poem in generate(g, start=Nonterminal('five'), n=2000000):
+for poem in generate(g, start=Nonterminal('five')):
   fives.append(' '.join(poem))
 
-for poem in generate(g, start=Nonterminal('seven'), n=2000000):
+for poem in generate(g, start=Nonterminal('seven')):
   sevens.append(' '.join(poem))
 
 line1 = random.choice(fives)
